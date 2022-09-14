@@ -1,0 +1,24 @@
+:root {
+    --font-small:'Heebo' , sans-serif;
+    --font-big:'Inter' , sans-serif;
+    --font-decor: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: black;
+    margin: 0 auto;
+ }
+
+ .logo {
+    display: block;
+    margin: 0 auto;
+ }
+
+ .card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 0.81fr 1fr 0.81fr 1fr;
+    align-self: end
+ }
