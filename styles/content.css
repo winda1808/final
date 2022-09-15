@@ -16,12 +16,39 @@
     margin: 0 auto;
  }
 
- .card {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 0.81fr 1fr 0.81fr 1fr;
-    align-self: end
- }
+ div.gallery{
+  width: 100%;
+  display: grid;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 60px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 0.81fr 1fr 0.81fr 1fr;
+  grid-gap: 0.5em;
+  align-self: end;
+}
+
+.cards {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.img-card {
+  transition: all linear;
+}
+
+.img-top {
+  float: left;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cards:hover .img-top {
+  display: inline;
+}
 
 .social-links, .work-links, .about-links, .gallery-links {
     margin: 50px 0;
