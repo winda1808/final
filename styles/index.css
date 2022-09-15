@@ -17,7 +17,7 @@
  }
 
  .weather-data {
-    margin: 50px auto;
+    margin: 30px auto;
     display: block;
     text-align: center;
     font-size: 13px;
@@ -37,14 +37,16 @@
     font-size: 13px;
  }
 
-.social-links, .work-links, .about-links, .gallery-links {
-    margin: 50px 0;
+.social-links, .work-links, .gallery-links {
+    margin: 30px 0;
     color: black;
     text-decoration: none;
     font-size: 10px;
     padding: 10px;
     border-radius: 33px;
+    text-align: center;
 }
+
 
 .social-links:hover {
     background-color: #EE9966;
@@ -55,14 +57,28 @@
     transition: 0.3s ease-in-out;
 }
 
-.about-links:hover {
-    background-color: #131314;
-    border-radius: 100px;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-}
+.about-links {
+  margin: 30px 0;
+  color: black;
+  text-decoration: none;
+  font-size: 10px;
+  padding: 10px;
+  border-radius: 33px;
+  text-align: center;
+  }
+
+.on-hover{
+    display: none;
+  }
+
+.about-links:hover img{
+  background-color:#e29437;
+  border-radius: 100px;
+  padding: 10px;
+  align-items: center;
+ }
+
+
 
 .gallery-links:hover, .work-links:hover {
     background-color: #D35657;
@@ -104,14 +120,17 @@
 header {
     max-width: 800px;
     display: block;
-    margin: 100px auto;
-    margin-top: 100px;
+    margin: 10px auto;
+    margin-top: 50px;
+}
+
+.scroll {
+  position: sticky;
 }
 
 .home-scroll {
-    font-size: 25px;
-    position: sticky;
-    bottom: 10%;
+    position: absolute;
+    right: 0%;
 }
 
 .page-header {
@@ -164,8 +183,38 @@ header {
 }
 
 
-.dropdown-menu {
-    font-size: 10px;
+div.gallery{
+  width: 100%;
+  display: grid;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 60px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 0.81fr 1fr 0.81fr 1fr;
+  grid-gap: 0.5em;
+  align-self: end;
+}
+
+.cards {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.img-card {
+  transition: all linear;
+}
+
+.img-top {
+  float: left;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cards:hover .img-top {
+  display: inline;
 }
 
 .contact-link {
@@ -173,27 +222,46 @@ header {
 }
 
 .hotdog-image {
-    margin: 10px;
-    display: block;
-    margin-left: 80px;
+  margin: 10px;
+  display: block;
+  margin-left: 80px;
+}
+
+.about {
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .service {
-    margin: 0 auto;
-    margin-top: 40px;
-    max-width: 800px;
-    display: block;
+  margin-top: 40px;
+}
+
+.btn-service {
+  display: block;
+  margin: 0 auto;
+  background-color: #E29437;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.btn-service:hover {
+  display: block;
+  margin: 0 auto;
+  background-color: #C2CBe2;
+  border: none;
 }
 
 .service p {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .list-content {
-    margin: 0 auto;
-    display: block;
-    font-size: 10px;
-    line-height: 12px;
+  font-size: 10px;
+  line-height: 12px;
 }
 
 .main-carousel {
