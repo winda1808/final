@@ -4,6 +4,10 @@
     --font-decor: 'Montserrat', sans-serif;
 }
 
+img {
+  pointer-events: none;
+}
+
 .navbar {
     font-size: 12px;
     text-transform: uppercase;
@@ -16,14 +20,22 @@
     margin: 0 auto;
  }
 
- .gallery{
+ .container .box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+ }
+
+ .gallery{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.cards {
+.cards-subpage {
+  width: 300px;
+  padding: 5px;
   color: #fff;
   display: inline-block;
   margin: 8px;
@@ -32,7 +44,25 @@
   overflow: hidden;
   position: relative;
   text-align: center;
-  width: 100%;
+
+}
+
+.subpage-img {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cards {
+  width: 300px;
+  padding: 5px;
+  color: #fff;
+  display: inline-block;
+  margin: 8px;
+  max-width: 320px;
+  min-width: 240px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
 }
 
 .cards * {
@@ -53,6 +83,7 @@
   z-index: 1;
   opacity: 0;
   transform: scaleY(2);
+  border-radius: 10px;
 }
 
 .cards img {
@@ -62,6 +93,7 @@
 }
 
 .cards figcaption {
+  font-family: var(--font-small);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -76,7 +108,7 @@
   opacity: 0;
   z-index: 2;
   transition-delay: 0.1s;
-  font-size: 24px;
+  font-size: 14px;
   font-family: sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
@@ -90,6 +122,49 @@
 
 .cards:hover figcaption {
   opacity: 1;
+}
+
+.time-lapse video {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 400px;
+}
+
+figcaption a {
+  text-decoration: none;
+  color: #fff;
+  border: #fff 1px solid;
+  border-radius: 30px;
+  padding: 7px 10px;
+  font-size: 10px;
+}
+
+figcaption a:hover {
+color: #131314;
+}
+
+.scroll {
+  position: sticky;
+}
+
+.back-scroll {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    font-size: 30px;
+}
+
+.home-scroll {
+  position: absolute;
+  right: 0;
+  font-size: 15px;
+}
+
+.image-on-page {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
 }
 
 .social-links, .work-links, .about-links, .gallery-links {
@@ -163,12 +238,6 @@ header {
     margin-top: 100px;
 }
 
-.home-scroll {
-    font-size: 25px;
-    position: sticky;
-    bottom: 10%;
-}
-
 .page-header {
     display:flex;
     justify-content: center;
@@ -216,11 +285,6 @@ header {
   text-align: center;
   font-family: var(--font-small);
   font-size: 15px;
-}
-
-
-.dropdown-menu {
-    font-size: 10px;
 }
 
 .contact-link {

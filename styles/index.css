@@ -4,6 +4,10 @@
     --font-decor: 'Montserrat', sans-serif;
 }
 
+img {
+  pointer-events: none;
+}
+
 .navbar {
     font-size: 12px;
     text-transform: uppercase;
@@ -68,7 +72,7 @@
   }
 
 .about-links:hover img{
-  background-color:#e29437;
+  background-color:none;
   border-radius: 100px;
   padding: 10px;
   align-items: center;
@@ -213,12 +217,6 @@ div.gallery{
 
 .contact-link {
     max-width: 800px;
-}
-
-.hotdog-image {
-  margin: 10px;
-  display: block;
-  margin-left: 80px;
 }
 
 .about {
