@@ -67,18 +67,12 @@
   text-align: center;
   }
 
-.on-hover{
-    display: none;
-  }
-
 .about-links:hover img{
   background-color:#e29437;
   border-radius: 100px;
   padding: 10px;
   align-items: center;
  }
-
-
 
 .gallery-links:hover, .work-links:hover {
     background-color: #D35657;
