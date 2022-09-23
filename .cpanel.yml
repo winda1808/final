@@ -1,5 +1,5 @@
 ---
 deployment:
 tasks:
-- export DEPLOYPATH=/home/winq5475/repositories/final
+- export DEPLOYPATH=/home/winq5475/public_html/git
 - /bin/cp -R * $DEPLOYPATH
